@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Controls · Tandem T6 · Liberty Garage</title>
+<meta name="description" content="Liberty Garage: free fan-made mods for Grand Theft Auto IV: The Complete Edition.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="../index.html">Liberty Garage</a><nav class="main"><a href="../index.html">Home</a><a href="index.html" aria-current="page">Tandem T6</a><a href="../roadster-x/index.html">Roadster X</a><a href="../versions.html">Versions</a><a href="../help/index.html">Help</a><a href="../about.html">About</a></nav></header>
+<main>
+<nav class="subnav"><a href="index.html">Overview</a><a href="install.html">Install</a><a href="controls.html" aria-current="page">Controls</a><a href="changelog.html">Changelog</a><a href="credits.html">Credits, terms & AI use</a><a href="../versions.html">Version numbers</a></nav>
+<article>
+<h1 id="tandem-t6-controls">Tandem T6 controls</h1>
+<p>The car drives with the game's normal controls. These are the extras. A short hint shows them each time you get in.</p>
+<div class="table"><table><thead><tr><th>Action</th><th>Keyboard</th><th>Controller (Xbox layout)</th></tr></thead><tbody><tr><td>Stats: card, live stats, off (cycles)</td><td>Tap <strong>K</strong></td><td>Hold <strong>LB</strong>, click <strong>R3</strong></td></tr><tr><td>Reset the timers and the top speed</td><td>Hold <strong>K</strong> (0.6 s)</td><td>Hold <strong>LB</strong> + <strong>R3</strong> (0.6 s)</td></tr><tr><td>Get in as the driver</td><td>The game's Enter vehicle key (<strong>F</strong> by default)</td><td><strong>Y</strong></td></tr><tr><td>Ride in the back of a Tandem T6 driven by a friend or a companion</td><td>Hold Enter vehicle (<strong>F</strong>) next to it</td><td>Hold <strong>Y</strong> next to it</td></tr><tr><td>Get out (either seat)</td><td>The game's exit key (<strong>F</strong> by default)</td><td><strong>Y</strong></td></tr></tbody></table></div>
+<h2 id="how-the-seats-work">How the seats work</h2>
+<ul><li>The driver sits in front and the passenger sits directly behind. Both get in through the front doors.</li><li>The rear passenger opens a front door and climbs through to the back, even when the driver is already in. They get out the same way.</li><li>Companions (bodyguards, friends) use the rear seat. They walk to a front door by themselves.</li></ul>
+<h2 id="the-stats">The stats</h2>
+<ul><li><strong>Card</strong> (shown for a few seconds when you get in): your best 0-60 mph, 0-100 km/h and quarter-mile times this session, the quarter-mile trap speed and your top speed, all measured in game.</li><li><strong>Live stats</strong>: power in kW (and amps), speed in mph and km/h, motor rpm, then the timers, then body roll, cornering g and what the stabiliser is doing.</li><li><strong>Timers</strong> start by themselves: come to a full stop, wait a moment, then accelerate. Hold K (or LB + R3) to clear them.</li></ul>
+<h2 id="notes">Notes</h2>
+<ul><li>The keys only work while the game window has focus, and they are ignored while a trainer menu (such as Liberty's Legacy) is open, so menu buttons don't reach the car.</li><li>L3 stays the game's horn: the car never reads it.</li></ul>
+<h2 id="changing-the-keys">Changing the keys</h2>
+<p>Open <code>plugins\TandemT6.ini</code> in a text editor:</p>
+<ul><li><code>[Keys] Hud=0x4B</code> is the keyboard key as a Windows virtual-key code: <code>0x4B</code> is K. For example, <code>0x4C</code> is L and <code>0x4A</code> is J.</li><li><code>[Pad] ChordA=0x0100</code> and <code>ChordB=0x0080</code> are the controller buttons as XInput values: <code>0x0100</code> is LB and <code>0x0080</code> is R3. Others: <code>0x0200</code> RB, <code>0x0040</code> L3, <code>0x1000</code> A, <code>0x2000</code> B.</li><li><code>[Pad] HoldMs=600</code> is how long a press counts as a hold, in milliseconds.</li></ul>
+<p>To apply a change while the game runs, change <code>[Live] Serial</code> (for example from <code>0</code> to <code>1</code>) and save. The car reloads its settings within a second.</p>
+</article>
+</main>
+<footer>
+<p>Liberty Garage mods are free and non-commercial. They are unofficial fan-made mods, not affiliated with,
+endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and Grand Theft Auto IV are
+trademarks of Take-Two Interactive Software.</p>
+<p><a href="../about.html">Terms and credits</a> · <a href="../help/report-bugs.html">Report a bug</a> · <a href="https://discord.gg/zFM2x8nn38" rel="noopener">LibertyGrage Discord</a></p>
+</footer>
+</body>
+</html>

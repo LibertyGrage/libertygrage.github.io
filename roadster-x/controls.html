@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Controls · Roadster X · Liberty Garage</title>
+<meta name="description" content="Liberty Garage: free fan-made mods for Grand Theft Auto IV: The Complete Edition.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="../index.html">Liberty Garage</a><nav class="main"><a href="../index.html">Home</a><a href="../tandem-t6/index.html">Tandem T6</a><a href="index.html" aria-current="page">Roadster X</a><a href="../versions.html">Versions</a><a href="../help/index.html">Help</a><a href="../about.html">About</a></nav></header>
+<main>
+<nav class="subnav"><a href="index.html">Overview</a><a href="install.html">Install</a><a href="controls.html" aria-current="page">Controls</a><a href="changelog.html">Changelog</a><a href="credits.html">Credits, terms & AI use</a><a href="../versions.html">Version numbers</a></nav>
+<article>
+<h1 id="roadster-x-controls">Roadster X controls</h1>
+<p>These are for the car's own systems. Driving itself (accelerate, brake, steer, horn, camera) stays the game's. Controller buttons use Xbox names. The game shows the controls for the moment on screen when you get in.</p>
+<h2 id="systems">Systems</h2>
+<div class="table"><table><thead><tr><th>Action</th><th>Keyboard</th><th>Controller</th></tr></thead><tbody><tr><td>Systems on / off</td><td>K</td><td>hold LB, click R3</td></tr><tr><td>Wing mode: Auto, Downforce, Airbrake, Stowed</td><td>U</td><td>none: set <code>[Wing] StartMode</code> in the settings file</td></tr></tbody></table></div>
+<h2 id="on-the-road">On the road</h2>
+<div class="table"><table><thead><tr><th>Action</th><th>Keyboard</th><th>Controller</th></tr></thead><tbody><tr><td>Jump over traffic (lands by itself)</td><td>tap E</td><td>tap LB</td></tr><tr><td>Higher jump: it keeps rising while you hold, so the hold sets the height; let go to drop onto the soft landing</td><td>hold E</td><td>hold LB</td></tr><tr><td>Rise and hover</td><td>E E (double-tap)</td><td>LB LB</td></tr><tr><td>Boost</td><td>hold R</td><td>hold A</td></tr><tr><td>180 spin toward the stick (centred: the way the car turns)</td><td>R R</td><td>A A</td></tr><tr><td>360 spin</td><td>R R R</td><td>A A A</td></tr><tr><td>Drift (and quick 180)</td><td>hold Space + A / D</td><td>hold RB + steer</td></tr><tr><td>From a standstill: turn smoothly on the spot (push further to turn faster)</td><td>hold Space + A / D</td><td>hold RB + left / right</td></tr><tr><td>Kickflip (stick picks the trick; centred: a roll)</td><td>Q Q</td><td>RB RB</td></tr></tbody></table></div>
+<h2 id="in-the-hover">In the hover</h2>
+<div class="table"><table><thead><tr><th>Action</th><th>Keyboard</th><th>Controller</th></tr></thead><tbody><tr><td>Climb</td><td>hold E or W</td><td>hold LB or RT</td></tr><tr><td>Climb straight up (look up)</td><td></td><td>right stick up</td></tr><tr><td>One 3 m step up</td><td>tap E</td><td>tap LB</td></tr><tr><td>Descend and land (tap: one step down)</td><td>S</td><td>LT</td></tr><tr><td>Travel forward / back (a gentle lean, height held)</td><td>Left Shift / Left Ctrl</td><td>left stick forward / back</td></tr><tr><td>Turn</td><td>A / D</td><td>left stick left / right</td></tr><tr><td>Boost</td><td>hold R</td><td>hold A</td></tr><tr><td>180 / 360 spin</td><td>R R / R R R</td><td>A A / A A A</td></tr><tr><td>Drop (free fall, caught just above the ground; not while looking up)</td><td>E E</td><td>LB LB</td></tr></tbody></table></div>
+<h2 id="any-time-in-the-air">Any time in the air</h2>
+<div class="table"><table><thead><tr><th>Action</th><th>Keyboard</th><th>Controller</th></tr></thead><tbody><tr><td>Tricks: the car turns freely with your aim; the hover keeps its height; forward also pushes</td><td>hold Q + Shift / Ctrl / A / D</td><td>hold RB + left stick</td></tr><tr><td>Drop</td><td>Q Q</td><td>RB RB</td></tr><tr><td>Fire the jets again: picks the car up; keep holding to rise, let go to drop onto the soft landing</td><td>E (once)</td><td>LB (once)</td></tr><tr><td>Back to the hover</td><td>E E</td><td>LB LB</td></tr><tr><td>While rising: tilt the nose a little</td><td>Left Shift / Left Ctrl</td><td>left stick forward / back</td></tr></tbody></table></div>
+<p>Hops, ramp jumps and ledge drops are caught near the ground automatically. In a jump or a drop, RT (W) only spins the wheels up, so you drive off fast when you land; in the hover it climbs.</p>
+<p>An option in <code>plugins\RoadsterX.ini</code>, <code>[Gas] Infinite=1</code>, gives an air reserve that never runs out.</p>
+<h2 id="leaving-the-car">Leaving the car</h2>
+<p>Use the game's exit button (F, or Y on a controller). From that moment the car's systems take no input, so nothing launches while you climb out.</p>
+<h2 id="changing-the-controls">Changing the controls</h2>
+<p>Every key and button can be changed in <code>plugins\RoadsterX.ini</code> (<code>[Keys]</code>, <code>[Pad]</code> and <code>[Controls]</code>). Each line has a comment. To apply a change without restarting, edit <code>[Live] Serial</code> (for example 0 to 1) and save.</p>
+</article>
+</main>
+<footer>
+<p>Liberty Garage mods are free and non-commercial. They are unofficial fan-made mods, not affiliated with,
+endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and Grand Theft Auto IV are
+trademarks of Take-Two Interactive Software.</p>
+<p><a href="../about.html">Terms and credits</a> · <a href="../help/report-bugs.html">Report a bug</a> · <a href="https://discord.gg/zFM2x8nn38" rel="noopener">LibertyGrage Discord</a></p>
+</footer>
+</body>
+</html>

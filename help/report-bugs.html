@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report a bug · Liberty Garage</title>
+<meta name="description" content="Liberty Garage: free fan-made mods for Grand Theft Auto IV: The Complete Edition.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="../index.html">Liberty Garage</a><nav class="main"><a href="../index.html">Home</a><a href="../tandem-t6/index.html">Tandem T6</a><a href="../roadster-x/index.html">Roadster X</a><a href="../versions.html">Versions</a><a href="index.html" aria-current="page">Help</a><a href="../about.html">About</a></nav></header>
+<main>
+
+<article>
+<h1 id="reporting-bugs">Reporting bugs</h1>
+<p>Every report helps, and a good report gets fixed first. Reports go to the <a href="report-bugs.html">issue tracker</a>, which asks for everything we need step by step. If you found the pack on a mod site, its Bugs tab works too: we copy those reports into the tracker.</p>
+<h2 id="pick-the-right-form">Pick the right form</h2>
+<ul><li><strong>Crash or freeze</strong>: the game closed by itself, froze, or didn't start.</li><li><strong>Bug report</strong>: something works differently from the docs.</li><li><strong>Idea or request</strong>: something new.</li></ul>
+<h2 id="what-to-attach">What to attach</h2>
+<p>All of these are plain text files you can drag into the form.</p>
+<div class="table"><table><thead><tr><th>File</th><th>Where</th><th>What it tells us</th></tr></thead><tbody><tr><td><code>LibertyCityCore.log</code>, <code>CompactHUD.log</code>, <code>LBInteractionCompat.log</code>, <code>PedSpawnGuard.log</code></td><td><code>plugins\</code> in your GTA IV folder</td><td>Which parts of the pack started, which ones switched themselves off and why</td></tr><tr><td><code>LibertyCityCrash.log</code></td><td><code>plugins\</code></td><td>What the pack saw just before a crash</td></tr><tr><td><code>ScriptHook.log</code></td><td>your GTA IV folder</td><td>Whether ScriptHook and the scripts loaded</td></tr><tr><td>The car's log, if you use one of our cars</td><td><code>plugins\RoadsterX.log</code> or <code>plugins\TandemT6.log</code></td><td>The car plugin's start-up and settings</td></tr></tbody></table></div>
+<p>Copy the logs <strong>right after</strong> the problem, before you start the game again: a new start overwrites them.</p>
+<h2 id="the-crash-location">The crash location</h2>
+<p>When GTA IV crashes, Windows records where:</p>
+<ol><li>Press <strong>Win</strong>, type <strong>Event Viewer</strong> and open it.</li><li>Go to <strong>Windows Logs &gt; Application</strong>.</li><li>Find the newest <strong>Application Error</strong> whose program is <strong>GTAIV.exe</strong>.</li><li>Copy the lines <strong>Faulting module name</strong> and <strong>Fault offset</strong> into the crash form.</li></ol>
+<p>That pair (for example <code>GTAIV.exe</code> and <code>0x008f2c32</code>) is often enough to find the exact cause.</p>
+<h2 id="your-setup-in-one-line">Your setup in one line</h2>
+<p>The forms ask for these. Having them ready saves time:</p>
+<ul><li>the pack version (from the zip name, for example <code>0.1.0-beta.1</code>)</li><li>Steam or Rockstar Games Launcher, and the game version (<a href="game-versions.html">how to check</a>)</li><li>Windows 10 or 11</li><li>your other mods: a list of the files in <code>plugins\</code> is perfect</li><li>keyboard and mouse, or which controller</li></ul>
+</article>
+</main>
+<footer>
+<p>Liberty Garage mods are free and non-commercial. They are unofficial fan-made mods, not affiliated with,
+endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and Grand Theft Auto IV are
+trademarks of Take-Two Interactive Software.</p>
+<p><a href="../about.html">Terms and credits</a> · <a href="report-bugs.html">Report a bug</a> · <a href="https://discord.gg/zFM2x8nn38" rel="noopener">LibertyGrage Discord</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tandem T6 · Liberty Garage</title>
+<meta name="description" content="Liberty Garage: free fan-made mods for Grand Theft Auto IV: The Complete Edition.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="../index.html">Liberty Garage</a><nav class="main"><a href="../index.html">Home</a><a href="index.html" aria-current="page">Tandem T6</a><a href="../roadster-x/index.html">Roadster X</a><a href="../versions.html">Versions</a><a href="../help/index.html">Help</a><a href="../about.html">About</a></nav></header>
+<main>
+<nav class="subnav"><a href="index.html" aria-current="page">Overview</a><a href="install.html">Install</a><a href="controls.html">Controls</a><a href="changelog.html">Changelog</a><a href="credits.html">Credits, terms & AI use</a><a href="../versions.html">Version numbers</a></nav>
+<article>
+<h1 id="tandem-t6">Tandem T6</h1>
+<blockquote><p>A tiny tandem two-seat electric car add-on for Grand Theft Auto IV: The Complete Edition (PC).</p></blockquote>
+<p>A one-metre-wide electric tandem two-seater, built from scratch for GTA IV. The driver sits in front and one passenger sits right behind, and everyone climbs in through the front doors. A heavy battery in the floor keeps it planted: it shrugs off hard corners and kerbs without rolling over, but it still spins and drifts like a GTA car. It is an add-on car, so no stock vehicle is replaced.</p>
+<p><img src="assets/hero.jpg" alt="Tandem T6, front three-quarter view" loading="lazy"></p><section id="download" class="download"><h2>Download</h2><p><a class="button" href="../downloads/TandemT6-1.0.0.zip">Download Tandem T6 1.0.0</a> <span class="meta">TandemT6-1.0.0.zip · 3.04 MB</span></p><p class="meta">SHA-256 <code>23e60611e3020cd94f833e0b0e94fdc9903027bbcaaa7ac1c87171f3cbdd9309</code> (<a href="../downloads/TandemT6-1.0.0.zip.sha256">checksum file</a>). Also on <a href="https://www.nexusmods.com/gta4/mods/1585" rel="noopener">Nexus Mods</a>.</p><p>Then follow the <a href="install.html">install guide</a>.</p></section>
+<div class="table"><table><tbody><tr><td><img src="assets/rear.jpg" alt="Rear view with the tall hatch and tail lamps" loading="lazy"></td><td><img src="assets/side.jpg" alt="Side view: one metre wide, two seats in a row" loading="lazy"></td></tr><tr><td><img src="assets/doors-open.jpg" alt="Both front doors and the rear hatch open" loading="lazy"></td><td><img src="assets/interior.jpg" alt="Cutaway: two seats in tandem inside a roll cage" loading="lazy"></td></tr></tbody></table></div>
+<p><em>Renders of the mod's own model. It comes in several paints, for example <a href="assets/blue.jpg">blue</a>.</em></p>
+<h2 id="features">Features</h2>
+<ul><li><strong>Add-on car <code>tandemt6</code></strong>: spawn it with any trainer that spawns cars by model name. No stock car is replaced.</li><li><strong>Tandem seating</strong>: driver in front, one passenger directly behind. Both get in through the front doors, and the rear passenger can climb in even when the driver is already sitting there.</li><li><strong>Ride in the back</strong>: hold the Enter vehicle button next to a Tandem T6 driven by a friend or a companion.</li><li><strong>Battery-weight stability</strong>: the heavy floor battery keeps it upright through hard corners and kerb strikes. It only lets go in really big crashes, and it rights itself if it ends up on its side. Spins and donuts still work.</li><li><strong>Live stats on screen</strong>: power in kW, speed in mph and km/h, motor rpm, body roll and cornering g. Automatic 0-60 mph, 0-100 km/h and quarter-mile timers start by themselves from a standstill, and your session's best times show on a card when you get in.</li><li><strong>20 original sounds</strong>: motor whine and growl that follow speed and throttle, a launch bite with a tyre chirp, carbon doors, the front seat sliding for the rear passenger, wind, body rattle, impacts and more.</li><li><strong>Body damage and deformation</strong>, like the stock cars.</li><li><strong>No battery to recharge</strong>: drive as far as you like.</li><li><strong>Every setting in one file</strong> (<code>plugins/TandemT6.ini</code>), and you can change settings while you play.</li></ul>
+<h2 id="requirements">Requirements</h2>
+<ul><li>Grand Theft Auto IV: The Complete Edition for PC, version 1.2.0.59 (Steam or Rockstar Games Launcher) on Windows, or on a Mac with CrossOver</li><li><a href="https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/releases" rel="noopener">FusionFix</a> 5.1.1 or newer by ThirteenAG and team: it loads the <code>plugins</code> folder (it includes the ASI loader) and the <code>update</code> folder where the car lives</li><li>Aru's C++ ScriptHook 0.5.1 (<code>ScriptHook.dll</code>) plus the Complete Edition hook fix (<code>aCompleteEditionHook.asi</code>): <a href="https://www.lcpdfr.com/downloads/gta4mods/g17media/26726-hook-fixes-for-complete-edition/" rel="noopener">Hook fixes for Complete Edition</a>. The car's plugin runs as a ScriptHook script</li><li>Optional: a trainer that spawns add-on cars by model name, for example <a href="https://www.nexusmods.com/gta4/mods/100" rel="noopener">Liberty's Legacy</a> 2.4.1</li></ul>
+<p>None of these are included. Get them from their authors' pages.</p>
+<h2 id="controls">Controls</h2>
+<p>See <a href="controls.html">docs/CONTROLS.md</a> for keyboard and controller.</p>
+<h2 id="known-issues">Known issues</h2>
+<ul><li><strong>No horn, engine or tyre-skid sounds from the game itself.</strong> GTA IV gives add-on cars no audio entry of their own, and that file can't be shipped with a mod. The car's own sounds cover the motor, launch, doors, seat, wind, rattles and impacts, but the horn is silent.</li><li><strong>Companions boarding the rear seat</strong> is the least tested part. If a bodyguard or friend gets stuck at the door, step away a few metres and let them try again, and please report it.</li><li><strong>Text slot</strong>: the car's name and on-screen hints use the game's <code>&lt;language&gt;7.gxt</code> text files. Another mod that uses the same slot will clash with it. Tell us and we'll move to another slot.</li><li><strong>On-screen stats</strong> sit on the right-hand side of the screen and can overlap other HUD mods. Move them with <code>[Hud] X</code>, <code>Y</code>, <code>CardX</code> and <code>CardY</code> in <code>plugins/TandemT6.ini</code>.</li><li><strong>The data lines are added by hand</strong>: there is no installer (see <a href="install.html">docs/INSTALL.md</a>).</li><li>Developed and tested on a Mac with CrossOver. Windows should behave the same, but it hasn't been tested yet.</li></ul>
+</article>
+</main>
+<footer>
+<p>Liberty Garage mods are free and non-commercial. They are unofficial fan-made mods, not affiliated with,
+endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and Grand Theft Auto IV are
+trademarks of Take-Two Interactive Software.</p>
+<p><a href="../about.html">Terms and credits</a> · <a href="../help/report-bugs.html">Report a bug</a> · <a href="https://discord.gg/zFM2x8nn38" rel="noopener">LibertyGrage Discord</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install · Tandem T6 · Liberty Garage</title>
+<meta name="description" content="Liberty Garage: free fan-made mods for Grand Theft Auto IV: The Complete Edition.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="../index.html">Liberty Garage</a><nav class="main"><a href="../index.html">Home</a><a href="index.html" aria-current="page">Tandem T6</a><a href="../roadster-x/index.html">Roadster X</a><a href="../versions.html">Versions</a><a href="../help/index.html">Help</a><a href="../about.html">About</a></nav></header>
+<main>
+<nav class="subnav"><a href="index.html">Overview</a><a href="install.html" aria-current="page">Install</a><a href="controls.html">Controls</a><a href="changelog.html">Changelog</a><a href="credits.html">Credits, terms & AI use</a><a href="../versions.html">Version numbers</a></nav>
+<article>
+<h1 id="installing-tandem-t6">Installing Tandem T6</h1>
+<p>Installing takes about ten minutes. You copy two folders into the game and paste three lines into three text files. There is no installer, and nothing in the game's own <code>common</code> folder is changed.</p>
+<h2 id="before-you-start">Before you start</h2>
+<ol><li>Back up your GTA IV folder (or at least <code>update/</code> and <code>plugins/</code>).</li><li>Install everything in the <a href="../help/index.html#requirements">README's requirements</a>: FusionFix, ScriptHook and the Complete Edition hook fix. Start the game once to check that they work, then close it.</li><li>Find your GTA IV folder: it is the one with <code>GTAIV.exe</code> in it. On Steam it is usually <code>Steam\steamapps\common\Grand Theft Auto IV\GTAIV</code>.</li></ol>
+<h2 id="what-s-in-the-zip">What's in the zip</h2>
+<pre><code>TandemT6-&lt;version&gt;/
+  Game Folder/
+    plugins/
+      TandemT6.asi          the car&#x27;s plugin (seating, stability, stats, sounds)
+      TandemT6.ini          its settings
+      TandemT6/sfx/         20 sound files
+    update/
+      z-TandemT6/tandemt6.img       the car (model and textures)
+      common/text/&lt;language&gt;7.gxt   the car&#x27;s name and on-screen hints (7 languages)
+  Data Lines/
+    vehicles.ide.txt        one line for the game&#x27;s vehicle list
+    carcols.dat.txt         one line for the car&#x27;s paint colours
+    handling.dat.txt        one line for the car&#x27;s handling
+  README.txt  LICENSE.txt  CHANGELOG.txt  SHA256SUMS.txt  manifest.json</code></pre>
+<h2 id="install">Install</h2>
+<ol><li>Download <code>TandemT6-&lt;version&gt;.zip</code> from the <a href="index.html#download">download section</a> and unzip it. If you want to check the download, compare the files with <code>SHA256SUMS.txt</code>.</li><li>Open the zip's <code>Game Folder</code> and copy its two folders, <code>plugins</code> and <code>update</code>, into your GTA IV folder. Merge them with the folders that are already there. You don't need to replace any existing file.</li><li>Add the three data lines. In your GTA IV folder, open <code>update\common\data</code>: Never edit the files in <code>common\data</code> itself. <code>Data Lines</code>. Each <code>.txt</code> file says where its line goes:<ul><li>If <code>vehicles.ide</code>, <code>carcols.dat</code> or <code>handling.dat</code> is missing there, copy it in from <code>common\data</code> first.</li><li>If another add-on car already put these files there, keep them and add our lines to them.</li><li>Open each file in a plain text editor (Notepad works) and paste the line from the matching <code>.txt</code> file in<ul><li><code>vehicles.ide</code>: inside the <code>cars</code> section, just before that section's <code>end</code> line</li><li><code>carcols.dat</code>: inside the <code>car3</code> section, just before that section's <code>end</code> line</li><li><code>handling.dat</code>: on its own line among the other car rows</li></ul></li><li>Paste the lines exactly as they are (they contain tabs) and save as plain text.</li></ul></li><li>Start the game and spawn <code>tandemt6</code> with your trainer. With Liberty's Legacy, add <code>tandemt6</code> on its own line to the trainer's add-on car list (<code>Liberty&#x27;s Legacy\Lists\addon_vehicle_models.txt</code> in your GTA IV folder), and the car shows up in its add-on vehicles menu.</li><li>Get in. A short hint shows the controls, and the stats card shows your best times (<a href="controls.html">controls</a>).</li></ol>
+<h3 id="on-a-mac-with-crossover">On a Mac with CrossOver</h3>
+<p>Do the same steps inside your CrossOver bottle:</p>
+<ol><li>In CrossOver, open the bottle's C: drive and go to the GTA IV folder, usually <code>Program Files (x86)\Steam\steamapps\common\Grand Theft Auto IV\GTAIV</code>.</li><li>Follow steps 1 to 5 above in that folder.</li><li>If no ASI mod loads at all, set a DLL override in the bottle's Wine configuration: <code>dinput8</code> = native, builtin. FusionFix's own readme explains this.</li></ol>
+<h2 id="uninstall">Uninstall</h2>
+<ol><li>Delete these from your GTA IV folder: <code>japanese7.gxt</code>, <code>russian7.gxt</code> and <code>spanish7.gxt</code><ul><li><code>plugins\TandemT6.asi</code>, <code>plugins\TandemT6.ini</code> and the folder <code>plugins\TandemT6\</code></li><li>the folder <code>update\z-TandemT6\</code></li><li>the seven text files <code>update\common\text\american7.gxt</code>, <code>french7.gxt</code>, <code>german7.gxt</code>, <code>italian7.gxt</code>,</li></ul></li><li>Remove the three Tandem T6 lines from <code>vehicles.ide</code>, <code>carcols.dat</code> and <code>handling.dat</code> in <code>update\common\data</code>. If you copied those files there only for this mod and no other mod uses them, you can delete them instead.</li><li>If you added <code>tandemt6</code> to your trainer's add-on list, remove that line too.</li><li>Before you uninstall, don't leave the car in a safehouse garage. Get out of it somewhere else, then save.</li></ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="table"><table><thead><tr><th>Problem</th><th>Fix</th></tr></thead><tbody><tr><td>The trainer can't spawn <code>tandemt6</code>, or the game says the model isn't found</td><td>Check that <code>update\z-TandemT6\tandemt6.img</code> is in place and that the <code>vehicles.ide</code> line is inside the <code>cars</code> section of <code>update\common\data\vehicles.ide</code>.</td></tr><tr><td>The game crashes while loading after you added the lines</td><td>A data line is broken or in the wrong section. Paste it again from <code>Data Lines</code>, with its tabs. Make sure the <code>TANDEMT6</code> row is in <code>handling.dat</code>, because the <code>vehicles.ide</code> line refers to it.</td></tr><tr><td>The car's name shows as <code>TANDEMT6</code> or nothing at all</td><td>The text files <code>update\common\text\*7.gxt</code> are missing, or another mod replaced them (see Known issues in the README).</td></tr><tr><td>No stats, no hint, no rear-seat boarding, no custom sounds</td><td>The plugin didn't load. Check that ScriptHook (<code>ScriptHook.dll</code>) and <code>aCompleteEditionHook.asi</code> are installed. <code>plugins\TandemT6.log</code> says what loaded.</td></tr><tr><td>No motor sound</td><td>Check that the 20 files are in <code>plugins\TandemT6\sfx\</code>, that <code>[Sound] Enabled=1</code> in <code>plugins\TandemT6.ini</code>, and that the game's SFX volume isn't at zero.</td></tr><tr><td>The horn is silent</td><td>That's expected: see Known issues in the README.</td></tr><tr><td>K or the controller chord does nothing</td><td>The game window must have focus, and the keys are ignored while a trainer menu is open. Check <code>[Keys]</code> and <code>[Pad]</code> in <code>plugins\TandemT6.ini</code> if you remapped them.</td></tr><tr><td>The stats overlap another HUD mod</td><td>Move them with <code>[Hud] X</code>, <code>Y</code>, <code>CardX</code> and <code>CardY</code> in <code>plugins\TandemT6.ini</code>.</td></tr><tr><td>On a Mac, no mod loads at all</td><td>Set the <code>dinput8</code> DLL override (see "On a Mac with CrossOver" above).</td></tr></tbody></table></div>
+<p>When you report a problem, attach <code>plugins\TandemT6.log</code> and say which game version and other mods you use (<a href="../help/report-bugs.html">report a bug</a>).</p>
+</article>
+</main>
+<footer>
+<p>Liberty Garage mods are free and non-commercial. They are unofficial fan-made mods, not affiliated with,
+endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and Grand Theft Auto IV are
+trademarks of Take-Two Interactive Software.</p>
+<p><a href="../about.html">Terms and credits</a> · <a href="../help/report-bugs.html">Report a bug</a> · <a href="https://discord.gg/zFM2x8nn38" rel="noopener">LibertyGrage Discord</a></p>
+</footer>
+</body>
+</html>

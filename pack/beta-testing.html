@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beta testing · Liberty Garage</title>
+<meta name="description" content="Liberty Garage: free fan-made mods for Grand Theft Auto IV: The Complete Edition.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="../index.html">Liberty Garage</a><nav class="main"><a href="../index.html">Home</a><a href="../tandem-t6/index.html">Tandem T6</a><a href="../roadster-x/index.html">Roadster X</a><a href="../versions.html">Versions</a><a href="../help/index.html">Help</a><a href="../about.html">About</a></nav></header>
+<main>
+
+<article>
+<h1 id="beta-testing-on-windows">Beta testing on Windows</h1>
+<p>Thank you for testing. A beta build is how we find out whether what works in our own game also works on your PC. One full pass takes about two hours. When you're done, send it with the <strong>Windows test report</strong> form in the <a href="../help/report-bugs.html">issue tracker</a>; file each problem you found as its own bug or crash report too.</p>
+<h2 id="before-you-start">Before you start</h2>
+<ul><li>A PC with Windows 10 or 11 and <strong>GTA IV: The Complete Edition 1.2.0.59</strong> from Steam or the Rockstar Games Launcher. (<a href="../help/game-versions.html">Which GTA IV do I have?</a>)</li><li>Ideally a game with <strong>no other mods</strong>, so a problem can only come from the pack or its requirements. If you already mod your game, back up the whole GTA IV folder and your saves first.</li><li>A save that is past the first island, so there's something to drive around in.</li></ul>
+<p>Write down as you go: the time each step took, anything in the docs that confused you, and the exact text of any error.</p>
+<h2 id="the-checklist">The checklist</h2>
+<h3 id="1-your-setup">1. Your setup</h3>
+<ol><li>Note your store (Steam or Rockstar Games Launcher) and Windows version.</li><li>Check that <strong>GTAIV.exe</strong> says <strong>1.2.0.59</strong> (right-click &gt; Properties &gt; Details).</li><li>Get its fingerprint: in the GTA IV folder, click the address bar, type <code>cmd</code>, press Enter, then run <code>certutil -hashfile GTAIV.exe SHA256</code> and copy the long number into your report.</li></ol>
+<h3 id="2-requirements-only">2. Requirements only</h3>
+<ol><li>Install the required mods with the <a href="install.html">install guide</a>, step 1, but not the pack yet.</li><li>Start the game, load your save, open the trainer, open the weapon wheel, drive for five minutes.</li><li>Note your frame rate in one spot you'll come back to (the Steam overlay or any FPS counter shows it).</li></ol>
+<h3 id="3-the-pack">3. The pack</h3>
+<ol><li>Install the pack with the install guide, step 2, including Tandem T6 from the zip's <code>Optional</code> folder.</li><li>Start the game and load your save. Note how long the first start takes and whether the "ready, restart once" line appears; then quit and start again.</li><li>Open <code>plugins\</code> and check the pack's <code>.log</code> files: does each one end by saying it is ready? Copy any line that says a check failed.</li><li>Check your frame rate at the same spot as before.</li></ol>
+<h3 id="4-play">4. Play</h3>
+<p>Tick off what works, and note what doesn't:</p>
+<ol><li>The trainer's menu shows the pack's pages, and the selected line is marked.</li><li>The HUD card shows next to the radar; aim at a police officer, a gang member and a civilian: the reticle changes colour.</li><li>Chauffeur: set a waypoint and start a ride. Stop it halfway and take the wheel.</li><li>Drive through Algonquin for ten minutes; start a fight on a busy street and see whether traffic clears.</li><li>Quick settings: turn the seat belt on, crash into something hard, and check you stay in the car.</li><li>Spawn two bodyguards with the trainer, get into a car, and check they get in too.</li><li>Turn on police and arrests, start a gang fight near officers, and watch them respond.</li><li>Weapon wheel: hold the button for the wheel, tap it to holster.</li><li>Episode weapons: open the weapon wheel and pick an episode gun; fire it (does it make its own sound?); try a grenade, then the parachute from a tall building.</li><li>Modes: switch to Quiet Drive, then Kids Drive, then back to Career from the menu.</li><li>Cars: spawn Tandem T6 and Roadster X from the garage and drive each one for a few minutes.</li><li>Play one story mission start to finish.</li><li>Keep playing free roam for at least 30 minutes in total.</li></ol>
+<p>Where things are: on a controller, <strong>RB + X</strong> opens the trainer (F11 on the keyboard); the pack's <strong>Quick Settings</strong> are the first row of its menu, or hold <strong>Select</strong>. <strong>Start twice</strong> opens the garage. Modes are <em>Career</em>, <em>Quiet Drive</em> and <em>Kids Drive</em>; the handling presets are <em>Balanced Road</em>, <em>Chill - Normal Handling</em>, <em>Chaos 1 - Heavy and Fast</em> and <em>Chaos 2 - Maximum</em>; traffic is <em>Light</em>, <em>Normal</em>, <em>Busy</em> or <em>Off</em>.</p>
+<h3 id="5-quit-and-come-back">5. Quit and come back</h3>
+<ol><li>Quit to Windows from the game's menu. Did it close cleanly, without a crash message?</li><li>Start the game again and load your save. Is everything as you left it?</li></ol>
+<h3 id="6-uninstall">6. Uninstall</h3>
+<ol><li>Remove the pack with the install guide's <em>Uninstall</em> steps, starting with <code>[Data] Remove=1</code>. Check that <code>update\</code> holds nothing of the pack's afterwards.</li><li>Start the game and load your save. Does it play like before the pack?</li></ol>
+<h3 id="with-the-recommended-mods">With the recommended mods</h3>
+<p>If you can, run sections 3 and 4 a second time with the <a href="requirements.html#recommended-for-the-full-look">recommended mods</a> installed too, and note which ones you used.</p>
+<h3 id="if-you-have-both-stores">If you have both stores</h3>
+<p>If you own the game on both Steam and the Rockstar Games Launcher, or can borrow the other one, repeat sections 1 and 3 on the other copy. We especially want the GTAIV.exe fingerprint from a Rockstar Games Launcher copy.</p>
+<h2 id="sending-your-results">Sending your results</h2>
+<p>Use the <strong>Windows test report</strong> form: it holds this checklist, so you can paste your notes into it. Attach the pack's <code>.log</code> files and <code>ScriptHook.log</code>. For anything that went wrong, also open a bug or crash report (<a href="../help/report-bugs.html">how</a>), so each problem gets its own fix.</p>
+</article>
+</main>
+<footer>
+<p>Liberty Garage mods are free and non-commercial. They are unofficial fan-made mods, not affiliated with,
+endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and Grand Theft Auto IV are
+trademarks of Take-Two Interactive Software.</p>
+<p><a href="../about.html">Terms and credits</a> · <a href="../help/report-bugs.html">Report a bug</a> · <a href="https://discord.gg/zFM2x8nn38" rel="noopener">LibertyGrage Discord</a></p>
+</footer>
+</body>
+</html>

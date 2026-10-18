@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install · Liberty City Pack · Liberty Garage</title>
+<meta name="description" content="Liberty Garage: free fan-made mods for Grand Theft Auto IV: The Complete Edition.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="../index.html">Liberty Garage</a><nav class="main"><a href="../index.html">Home</a><a href="../tandem-t6/index.html">Tandem T6</a><a href="../roadster-x/index.html">Roadster X</a><a href="../versions.html">Versions</a><a href="../help/index.html">Help</a><a href="../about.html">About</a></nav></header>
+<main>
+<nav class="subnav"><a href="index.html">Overview</a><a href="install.html" aria-current="page">Install</a><a href="requirements.html">Requirements</a><a href="changelog.html">Changelog</a><a href="credits.html">Credits, terms & AI use</a><a href="../versions.html">Version numbers</a></nav>
+<article>
+<h1 id="installing-liberty-city-pack">Installing Liberty City Pack</h1>
+<p>Installing takes about twenty minutes the first time, most of it for the required mods. The pack itself is one folder you copy into the game, plus one restart. Nothing in the game's own files is changed: the pack only adds files to <code>plugins\</code> and to FusionFix's <code>update\</code> folder.</p>
+<h2 id="before-you-start">Before you start</h2>
+<ol><li>Check that you have <strong>GTA IV: The Complete Edition 1.2.0.59</strong> (<a href="../help/game-versions.html">how to check</a>).</li><li>Back up:<ul><li>your saves: <code>Documents\Rockstar Games\GTA IV</code></li><li>your GTA IV folder, or at least <code>plugins\</code>, <code>update\</code> and any trainer files in it.</li></ul></li><li>Find your GTA IV folder: the one with <code>GTAIV.exe</code> in it (<a href="../help/game-versions.html#find-your-gta-iv-folder">Steam and Rockstar Games Launcher</a>).</li></ol>
+<h2 id="step-1-the-required-mods">Step 1: the required mods</h2>
+<p>Install each mod in <a href="requirements.html">REQUIREMENTS</a> by following its own readme, in this order:</p>
+<ol><li><strong>FusionFix 5.1.2</strong>. Start the game once and check that it still reaches the main menu. Close it.</li><li><strong>ScriptHook 0.5.1 with the Complete Edition hook fix</strong>.</li><li><strong>Liberty's Legacy 2.4.1</strong>. Start the game, load a save and open the trainer (its readme lists the key).</li><li><strong>Liberty Loadout 0.18.0</strong>. In game, open the weapon wheel once.</li></ol>
+<p>If the game doesn't reach the main menu at any point, undo the last mod and check its readme before going on. It's much easier to find a problem now than after the pack is in.</p>
+<h2 id="step-2-the-pack">Step 2: the pack</h2>
+<ol><li>Download <code>LibertyCityPack-&lt;version&gt;.zip</code> from the <a href="index.html#download">download section</a> and unzip it. To check the download, compare the files with <code>SHA256SUMS.txt</code>.</li><li>Open the zip's <code>Game Folder</code> and copy its <code>plugins</code> folder into your GTA IV folder. Merge it with the <code>plugins</code> folder that is already there. You don't need to replace any existing file.</li><li>Make the one change in Liberty Loadout's settings (below).</li><li>Optional, our cars: for each car you want, open <code>Optional\&lt;car&gt;\Game Folder</code> in the zip and copy its <code>plugins</code> and <code>update</code> folders into your GTA IV folder the same way. <strong>Don't paste any data lines</strong>: the pack adds them for you on the next start. The car's own <code>README.txt</code> describes pasting them by hand for people who install the car without the pack; skip that step.</li><li>Start the game. On this first start the pack builds the episode-weapon data from the episodes in your own copy of the game (about a second; nothing is downloaded), and adds the data lines for any of our cars you installed. About five seconds into the game a line says it's ready: <strong>quit and start the game once more</strong>.</li><li>From the second start on, you have the episode weapons with their sounds, the parachute and character switching, and our cars in the garage.</li></ol>
+<h3 id="what-the-first-start-does">What the first start does</h3>
+<ul><li>It reads The Lost and Damned and The Ballad of Gay Tony files that come with your Complete Edition, and writes the data it makes into the <code>update</code> folder FusionFix uses. It never changes the game's own files.</li><li>If another mod already has one of those files there (a weapon mod's <code>WeaponInfo.xml</code>, or a <code>waveslots.xml</code> from Radio Restoration or a car mod), the pack adds to that file and keeps the original in <code>update\z-LibertyEpisodes\originals\</code>. If it can't add to it (a broken file, for example), it writes nothing, the on-screen line says another mod has the files, and <code>plugins\LibertyEpisodes.log</code> names the file.</li><li>The episode gun sounds need the game on an <strong>NTFS</strong> drive (Windows' normal format). On other drives the weapons work without their episode sounds.</li><li>After a game update, or if one of its files goes missing, it rebuilds by itself on the next start: then restart once more.</li><li>Keep FusionFix's own episode-weapons option <strong>off</strong>: <code>EpisodicWeapons=0</code> in the <code>[EPISODICCONTENT]</code> section of its settings, which is the default. With it on, FusionFix crashes at start-up; the pack does that job itself.</li></ul>
+<h3 id="one-setting-in-liberty-loadout">One setting in Liberty Loadout</h3>
+<p>So the weapon wheel sits on the LB button (tap to holster, hold for the wheel), open <code>plugins\LibertyLoadout.ini</code> and change</p>
+<pre><code>WeaponWheelControllerButton NextWeapon</code></pre>
+<p>to</p>
+<pre><code>WeaponWheelControllerButton LB</code></pre>
+<p><code>Settings for other mods.txt</code> in the zip says the same. Nothing else in another mod's files needs changing.</p>
+<h3 id="what-s-in-the-zip">What's in the zip</h3>
+<pre><code>LibertyCityPack-&lt;version&gt;/
+  Game Folder/
+    plugins/
+      LibertyCityCore.asi     menus, chauffeur, traffic, police, crew, modes, crash guards
+      CompactHUD.asi          HUD card, reticle, map, the world-loading fix
+      LBInteractionCompat.asi the weapon-wheel button: tap to holster, hold for the wheel
+      PedSpawnGuard.asi       the bodyguard spawn guard
+      LibertyEpisodes.asi     episode weapons, the parachute, and the first-start step
+      LibertyCityPack/cars/   our cars&#x27; data lines, which the first start adds for you
+  Optional/
+    TandemT6/                 Tandem T6, exactly as its own release
+    RoadsterX/                Roadster X, exactly as its own release
+  README.txt  LICENSE.txt  CREDITS.txt  CHANGELOG.txt
+  Settings for other mods.txt
+  manifest.json  SHA256SUMS.txt</code></pre>
+<p>The pack's own settings files (<code>LibertyCityCore.ini</code>, <code>LibertyClownCar.ini</code>, <code>LibertyPedMenuGuard.ini</code>, <code>LibertyEpisodes.ini</code>) are optional: without them every setting uses its default, and the menu saves your choices.</p>
+<h2 id="check-that-it-works">Check that it works</h2>
+<ul><li>The trainer's menu shows the pack's pages.</li><li>The pack's logs in <code>plugins\</code> (<code>LibertyCityCore.log</code>, <code>CompactHUD.log</code>, <code>LBInteractionCompat.log</code>, <code>PedSpawnGuard.log</code>) each end with a line saying it is ready. A line saying a <strong>version check failed</strong> means one of the required mods is not the listed version.</li><li>Controls to start with, on a controller: <strong>RB + X</strong> opens the trainer (F11 on the keyboard), <strong>Start twice</strong> opens the garage, <strong>LB</strong> is the weapon wheel.</li></ul>
+<h2 id="on-a-mac-with-crossover">On a Mac with CrossOver</h2>
+<p>Do the same steps inside your CrossOver bottle:</p>
+<ol><li>In CrossOver, open the bottle's C: drive and go to the GTA IV folder, usually <code>Program Files (x86)\Steam\steamapps\common\Grand Theft Auto IV\GTAIV</code>.</li><li>Follow the steps above in that folder.</li><li>If no ASI mod loads at all, set a DLL override in the bottle's Wine configuration: <code>dinput8</code> = native, builtin. FusionFix's own readme explains this.</li></ol>
+<h2 id="uninstall">Uninstall</h2>
+<ol><li>First undo the first-start data: open <code>plugins\LibertyEpisodes.ini</code> (create it if it isn't there), add ``<code> [Data] Remove=1 </code>`<code> then start the game once and quit. That removes every file the pack made in </code>update\`, puts back any other mod's file it had added to, and takes our cars' data lines out.</li><li>Delete the pack's files from <code>plugins\</code>: every file and folder listed in the zip's <code>manifest.json</code>. To remove one of our cars, delete its <code>plugins\&lt;car&gt;.asi</code>, its <code>.ini</code> and folder, and <code>update\z-&lt;car&gt;\</code>.</li><li>The required mods stay installed and keep working without the pack. Remove them too, with their own readmes, if you want the plain game back.</li><li>Keep the save backup from <em>Before you start</em> until you've played a little without the pack.</li></ol>
+<h2 id="problems">Problems</h2>
+<p>See the wiki's <a href="../help/faq.html">FAQ</a>, then <a href="../help/report-bugs.html">report it</a>: attach the pack's <code>.log</code> files from <code>plugins\</code> and say which store and game version you have.</p>
+</article>
+</main>
+<footer>
+<p>Liberty Garage mods are free and non-commercial. They are unofficial fan-made mods, not affiliated with,
+endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and Grand Theft Auto IV are
+trademarks of Take-Two Interactive Software.</p>
+<p><a href="../about.html">Terms and credits</a> · <a href="../help/report-bugs.html">Report a bug</a> · <a href="https://discord.gg/zFM2x8nn38" rel="noopener">LibertyGrage Discord</a></p>
+</footer>
+</body>
+</html>

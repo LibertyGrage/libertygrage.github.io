@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install · Roadster X · Liberty Garage</title>
+<meta name="description" content="Liberty Garage: free fan-made mods for Grand Theft Auto IV: The Complete Edition.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="../index.html">Liberty Garage</a><nav class="main"><a href="../index.html">Home</a><a href="../tandem-t6/index.html">Tandem T6</a><a href="index.html" aria-current="page">Roadster X</a><a href="../versions.html">Versions</a><a href="../help/index.html">Help</a><a href="../about.html">About</a></nav></header>
+<main>
+<nav class="subnav"><a href="index.html">Overview</a><a href="install.html" aria-current="page">Install</a><a href="controls.html">Controls</a><a href="changelog.html">Changelog</a><a href="credits.html">Credits, terms & AI use</a><a href="../versions.html">Version numbers</a></nav>
+<article>
+<h1 id="installing-roadster-x">Installing Roadster X</h1>
+<h2 id="before-you-start">Before you start</h2>
+<ol><li>Back up your GTA IV folder (or at least <code>update\</code> and <code>plugins\</code>).</li><li>Install the requirements from the <a href="../help/index.html#requirements">README</a>: FusionFix, then ScriptHook with <code>aCompleteEditionHook.asi</code>. Start the game once to check that they work.</li></ol>
+<h2 id="what-s-in-the-zip">What's in the zip</h2>
+<pre><code>RoadsterX-&lt;version&gt;\
+  Game Folder\
+    plugins\RoadsterX.asi          the car&#x27;s systems (thrusters, flight, wing, panel)
+    plugins\RoadsterX.ini          every setting, one comment per line
+    plugins\RoadsterX\sfx\*.wav    the car&#x27;s sounds
+    update\z-RoadsterX\roadsterx.img        the model and its textures
+    update\common\text\&lt;language&gt;8.gxt      the car&#x27;s name and on-screen text (7 languages)
+  Data Lines\
+    vehicles.ide.txt  carcols.dat.txt  handling.dat.txt   one line each, to paste
+  README.txt  LICENSE.txt  CHANGELOG.txt</code></pre>
+<h2 id="install">Install</h2>
+<ol><li>Download <code>RoadsterX-&lt;version&gt;.zip</code> from the <a href="index.html#download">download section</a> and unzip it.</li><li>Open its <code>Game Folder</code> and copy the two folders inside it, <code>plugins</code> and <code>update</code>, into your GTA IV folder (the one with <code>GTAIV.exe</code>). Let them merge with the folders that are already there.</li><li>Add the three lines from <code>Data Lines</code> to the game's data files: missing there, copy it in first from <code>common\data</code>. Never edit the files in <code>common\data</code> itself. with a plain text editor such as Notepad, and save.<ul><li>In your GTA IV folder, open <code>update\common\data</code>. If <code>vehicles.ide</code>, <code>carcols.dat</code> or <code>handling.dat</code> is</li><li>Open each <code>.txt</code> in <code>Data Lines</code>. It says which file the line goes into and where. Paste the line there</li></ul></li><li>Start the game and spawn the car by its model name, <strong><code>roadsterx</code></strong>, with your trainer. Liberty's Legacy shows add-on cars from <code>Liberty&#x27;s Legacy\Lists\addon_vehicle_models.txt</code>: add the line <code>roadsterx</code> there.</li><li>Get in. The systems switch on and the controls appear on screen.</li></ol>
+<h3 id="on-a-mac-with-crossover">On a Mac with CrossOver</h3>
+<p>Do the same inside your CrossOver bottle:</p>
+<ol><li>In CrossOver, open the bottle's C: drive and go to the GTA IV folder, usually <code>Program Files (x86)\Steam\steamapps\common\Grand Theft Auto IV\GTAIV</code>.</li><li>Follow steps 1 to 5 above in that folder.</li><li>If no ASI mod loads at all, set a DLL override in the bottle's Wine configuration: <code>dinput8</code> = native, builtin (FusionFix's own readme explains this).</li></ol>
+<h2 id="uninstall">Uninstall</h2>
+<ol><li>Delete these from your GTA IV folder: japanese8, russian8 and spanish8. Check first that no other mod uses them.<ul><li><code>plugins\RoadsterX.asi</code>, <code>plugins\RoadsterX.ini</code> and the folder <code>plugins\RoadsterX\</code></li><li>the folder <code>update\z-RoadsterX\</code></li><li>the seven Roadster X text files <code>update\common\text\*8.gxt</code>: american8, french8, german8, italian8,</li></ul></li><li>Remove the three Roadster X lines from <code>update\common\data\vehicles.ide</code>, <code>carcols.dat</code> and <code>handling.dat</code>. If you copied those files in only for this mod, you can delete them instead.</li></ol>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="table"><table><thead><tr><th>Problem</th><th>Fix</th></tr></thead><tbody><tr><td>The car doesn't spawn, or its name shows wrong</td><td>Check the <code>vehicles.ide</code> and <code>carcols.dat</code> lines, and that <code>update\z-RoadsterX\roadsterx.img</code> is in place.</td></tr><tr><td>It drives, but jumping, flying and the thrusters do nothing</td><td>ScriptHook isn't loading: check <code>ScriptHook.dll</code> and <code>aCompleteEditionHook.asi</code> in the game folder. <code>plugins\RoadsterX.log</code> says what loaded.</td></tr><tr><td>No ASI mod loads at all (Mac)</td><td>Set the <code>dinput8</code> DLL override described above.</td></tr><tr><td>"Roadster X systems are OFF"</td><td>Turn them on: hold LB and click R3 (keyboard: K).</td></tr><tr><td>The on-screen panel hides something</td><td>Hide it in <code>plugins\RoadsterX.ini</code> with <code>[Hud] Show=0</code>, or move it with <code>PanelX</code> and <code>PanelBottom</code>.</td></tr><tr><td>Another mod's text disappeared, or the car shows no name</td><td>Both use <code>update\common\text\*8.gxt</code>. Tell us which mod and we'll release a version with another text slot.</td></tr><tr><td>The handling feels wrong</td><td>Check that the <code>handling.dat</code> line went into <code>update\common\data\handling.dat</code> and that no other mod uses the <code>ROADSTERX</code> row.</td></tr></tbody></table></div>
+<p>When you report a problem, attach <code>plugins\RoadsterX.log</code> and say which game version you have.</p>
+</article>
+</main>
+<footer>
+<p>Liberty Garage mods are free and non-commercial. They are unofficial fan-made mods, not affiliated with,
+endorsed by or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and Grand Theft Auto IV are
+trademarks of Take-Two Interactive Software.</p>
+<p><a href="../about.html">Terms and credits</a> · <a href="../help/report-bugs.html">Report a bug</a> · <a href="https://discord.gg/zFM2x8nn38" rel="noopener">LibertyGrage Discord</a></p>
+</footer>
+</body>
+</html>
